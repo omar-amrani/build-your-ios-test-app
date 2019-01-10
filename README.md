@@ -13,4 +13,11 @@ While building this app, the main file that you'll be interacting with are:
 ### a- Download and Install Xcode
 Xcode is a development environment for macOS and that isused to build iOS apps.
 First, you'll need to create an apple account by going [here](https://appleid.apple.com/account?appId=632&returnUrl=https%3A%2F%2Fdeveloper.apple.com%2Fdownload%2F#!&page=create) then you can download Xcode by going to this [link](https://developer.apple.com/xcode/).
-After that, just follow the instructions to get Xcode installed.
+After that, just follow the instructions to get Xcode installed. I recommend to check out [this video](https://www.youtube.com/watch?v=YIZxSZJMU2Y) to know more about how to use Xcode.
+### b- Create a new Xcode project
+- First open Xcode and click on "Create a new Xcode project"
+- Then select the app template you want to use. In our example, we will use the "Single View App" template
+- Set the product name for your project and make sure to select "Swift" as a language
+- Select the directory where you want to save your project then hit create
+
+
