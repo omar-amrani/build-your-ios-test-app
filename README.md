@@ -21,3 +21,4 @@ After that, just follow the instructions to get Xcode installed. I recommend to 
 - Select the directory where you want to save your project then hit create
 
 
+![](https://downloads.intercomcdn.com/i/o/96184484/e2d09bd5c79921126441d344/Screen+Recording+2019-01-10+at+09.07+p.m..gif)
