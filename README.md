@@ -30,3 +30,12 @@ An iOS library can be installed in 3 different ways:
 - Downloading and manually adding the library framework to your Xcode project
 
 Please refer to our [official documentation](https://developers.intercom.com/installing-intercom/docs/ios-installation#section-step-1-install-intercom) to install Intercom using one of the method mentioned above.
+
+### d- Updating info.plist with the correct permissions
+
+In order to be able to upload an image/GIF in the Intercom messenger, the app will need first to get the user's permission to access photo library. This can easily be done by adding a "Privacy - Photo Library Usage Description" entry to the info.plist file.
+
+![](https://downloads.intercomcdn.com/i/o/96189961/f6f406f6e49aaecaf7d40dd8/56a43d2-Screen_Shot_2016-11-09_at_16.01.34.png)
+
+
+### e- Initializing Intercom for your iOS app
