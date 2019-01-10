@@ -39,3 +39,10 @@ In order to be able to upload an image/GIF in the Intercom messenger, the app wi
 
 
 ### e- Initializing Intercom for your iOS app
+
+The idea here is to load Intercom when your app is launching. In order to do so you'll need to:
+- Go to your [Intercom platform --> Settings --> Installation --> iOS](https://app.intercom.io/a/apps/_/settings/ios) and copy the Initialization line of code for Swift
+
+![](https://downloads.intercomcdn.com/i/o/96191205/ea8149f7f481aa6b2da49832/a2de3a1-Installing_iOS.png)
+- Add the line of code to the "didFinishLaunchingWithOptions" function of your AppDelegate.swift file
+
