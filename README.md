@@ -25,7 +25,8 @@ After that, just follow the instructions to get Xcode installed. I recommend to 
 
 ### c- Installing Intercom SDK for your iOS app
 An iOS library can be installed in 3 different ways:
--[CocoaPods](https://cocoapods.org/): An application level dependency manager for the Objective-C, Swift 
--[Carthage](https://github.com/Carthage/Carthage): A dependency manager that builds your dependencies and provides you with binary frameworks.
--Downloading and manually adding the library framework to your Xcode project
+- [CocoaPods](https://cocoapods.org/): An application level dependency manager for the Objective-C, Swift 
+- [Carthage](https://github.com/Carthage/Carthage): A dependency manager that builds your dependencies and provides you with binary frameworks.
+- Downloading and manually adding the library framework to your Xcode project
+
 Please refer to our [official documentation](https://developers.intercom.com/installing-intercom/docs/ios-installation#section-step-1-install-intercom) to install Intercom using one of the method mentioned above.
