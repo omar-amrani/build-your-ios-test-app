@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intercom
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,34 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBOutlet weak var user_id_email_text_field: UILabel!
+    
+    @IBAction func register_user_button(_ sender: Any) {
+        
+        let identifier = String(user_id_email_text_field.text!)
+        if identifier.contains("@"){
+            Intercom.registerUser(withEmail: identifier)
+            
+        } else {
+            
+            Intercom.registerUser(withUserId: identifier)
+        }
+        
+    }
+    
+    @IBAction func signout_button(_ sender: Any) {
+        Intercom.logout()
+    }
+    
+    @IBAction func display_messenger_button(_ sender: Any) {
+        Intercom.setLauncherVisible(true)
+    }
+    
+    
+    @IBAction func hide_messenger_button(_ sender: Any) {
+        Intercom.setLauncherVisible(false)
+    }
+    
 }
 

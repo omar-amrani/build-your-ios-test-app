@@ -228,19 +228,25 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)presentMessenger;
 
 /*!
+  Present the message composer.
+  @param initialMessage An optional message that is used to pre-populate the composer with some text.
+ */
++ (void)presentMessageComposer:(nullable NSString *)initialMessage;
+
+/*!
  Present the message composer.
  */
-+ (void)presentMessageComposer;
++ (void)presentMessageComposer __attribute((deprecated("'+[Intercom presentMessageComposer]' is deprecated. 'Use +[Intercom presentMessageComposer:initialMessage]' instead.")));
 
 /*!
  Present the message composer with a message to pre-populate the composer.
  */
-+ (void)presentMessageComposerWithInitialMessage:(NSString *)message;
++ (void)presentMessageComposerWithInitialMessage:(NSString *)message __attribute((deprecated("'+[Intercom presentMessageComposerWithInitialMessage]' is deprecated. 'Use +[Intercom presentMessageComposer:initialMessage]' instead.")));
 
 /*!
  Present the conversation list.
  */
-+ (void)presentConversationList;
++ (void)presentConversationList __attribute((deprecated("'+[Intercom presentConversationList]' is deprecated. 'Use +[Intercom presentMessenger]' instead.")));;
 
 #pragma mark - Help Center
 
@@ -369,16 +375,19 @@ UIKIT_EXTERN NSString *const IntercomUnreadConversationCountDidChangeNotificatio
 /*! @name Intercom Notifications */
 //=========================================================================================================
 /*!
- These are notifications thrown by Intercom for iOS when the Intercom window is displayed and hidden or when
- a new conversation has been started. These notifications are fired only when there is a change in the state
+ These are notifications thrown by Intercom for iOS when the Intercom window is displayed and hidden.
+ These notifications are fired only when there is a change in the state
  of Intercom's UI: when a user receives a message for instance, willShow and didShow notifications will be
  fired accordingly when the Intercom Notification (chat head) is presented.
 
  Once the user taps on the chat head, the message is presented in your app. It will be presented covering
  the entire screen, but no notifications will be thrown here as Intercom has already been visible.
 
- In the case of a new conversation the notification `IntercomDidStartNewConversationNotification` may be used to
- prompt users to enable push notifications.
+ In the case of a new conversation the notification `IntercomDidStartNewConversationNotification`, this
+ notification is fired when a new conversation is started. This may be used to prompt users to enable push notifications.
+ 
+ The Intercom Help Center notifications are fired when the Help Center is being displayed or hidden.
+ These notifications can be used to take certain actions in your app before and after the Help Center is displayed to the user.
  */
 
 UIKIT_EXTERN NSString *const IntercomWindowWillShowNotification;
@@ -386,6 +395,10 @@ UIKIT_EXTERN NSString *const IntercomWindowDidShowNotification;
 UIKIT_EXTERN NSString *const IntercomWindowWillHideNotification;
 UIKIT_EXTERN NSString *const IntercomWindowDidHideNotification;
 UIKIT_EXTERN NSString *const IntercomDidStartNewConversationNotification;
+UIKIT_EXTERN NSString *const IntercomHelpCenterWillShowNotification;
+UIKIT_EXTERN NSString *const IntercomHelpCenterDidShowNotification;
+UIKIT_EXTERN NSString *const IntercomHelpCenterWillHideNotification;
+UIKIT_EXTERN NSString *const IntercomHelpCenterDidHideNotification;
 
 @end
 
