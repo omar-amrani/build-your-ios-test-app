@@ -46,7 +46,7 @@ The idea here is to load Intercom when your app is launching. In order to do so 
 
 ![](https://downloads.intercomcdn.com/i/o/96191205/ea8149f7f481aa6b2da49832/a2de3a1-Installing_iOS.png)
 - Add the line of code to the "didFinishLaunchingWithOptions" function of your AppDelegate.swift file
-- **Also make sure to import Intercom by add "import Intercom" to the top of your AppDelegate.swift file**
+- **Also make sure to import Intercom by adding "import Intercom" to the top of your AppDelegate.swift file**
 
 ### f- Adding the UI elements to your iOS app
 
